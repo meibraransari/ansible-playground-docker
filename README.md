@@ -1,8 +1,8 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-03T11:34:09+05:30
+Updated: 2024-11-03T11:53:13+05:30
 ---
-# Ansible Playground Docker 
+# Ansible Playground Docker (Support 100+ Nodes)
 This repository provides a comprehensive guide to deploying **Ansible Playground Docker** using Docker. The setup includes demonstrations and step-by-step instructions, making it easy for beginners to quickly spin up an Ansible environment.
 ## Purpose
 
@@ -67,6 +67,13 @@ inventory_file="inventory.ini"
 ```sh
 bash setup_playground.sh
 ```
+The script should perform the following tasks:
+- **Generate SSH Key:** Create an SSH key pair named ansible_id_rsa_key in the home directory of the current user.
+- **Start Containers:** Launch containers based on a specified variable named containers.
+- **Test Connectivity:** Verify the network connectivity of the created containers.
+- **Generate Inventory File:** Create an inventory file in the user's home directory that lists the containers.
+- **Create Ansible Configuration File:** Generate an Ansible configuration file in the home directory of the current user.
+- **Ping Created Servers:** Execute a ping command to check the reachability of the newly created containers.
 ### Lab Test
 
 ### Test 1: Ping one by one server
