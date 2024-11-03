@@ -1,6 +1,6 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-03T11:29:32+05:30
+Updated: 2024-11-03T11:34:09+05:30
 ---
 # Ansible Playground Docker 
 This repository provides a comprehensive guide to deploying **Ansible Playground Docker** using Docker. The setup includes demonstrations and step-by-step instructions, making it easy for beginners to quickly spin up an Ansible environment.
@@ -130,7 +130,12 @@ btop --utf-force
 exit
 ```
 
+### Clean Lab
+Below command only delete created by this lab script.
 
+```
+docker rm -f $(docker ps -aq --filter "name=^server_[0-9]+$")
+```
 I hope you enjoyed using this Ansible lab! 😊
 ### Conclusion
 In summary, the Ansible Playground Docker offers a streamlined and efficient way for beginners to explore and practice Ansible without the need for multiple systems or servers. By providing an accessible and quick setup, this lab empowers users to enhance their skills and confidence in automation, paving the way for deeper exploration of Ansible's capabilities. We hope you found this resource helpful and enjoyable!
