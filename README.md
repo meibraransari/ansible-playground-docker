@@ -1,6 +1,6 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-03T11:26:07+05:30
+Updated: 2024-11-03T11:29:32+05:30
 ---
 # Ansible Playground Docker 
 This repository provides a comprehensive guide to deploying **Ansible Playground Docker** using Docker. The setup includes demonstrations and step-by-step instructions, making it easy for beginners to quickly spin up an Ansible environment.
@@ -13,6 +13,7 @@ The primary goal is to enable users to quickly create an Ansible playground in s
 - [Prerequisites](#prerequisites)
 - [Features](#Features)
 - [Quick Start](#quick-start)
+	- [Lab Setup](#Lab-Setup)
 	- [Change Variable](#Change-Variable)
 	- [Run Ansible Lab](#Run-Ansible-Lab)
 - [Lab Test](#Lab-Test)
@@ -29,13 +30,21 @@ The primary goal is to enable users to quickly create an Ansible playground in s
 - Dynamic variable support, no static Username and password.
 - Easy to setup LAB in seconds.
 - Destroy in seconds once lab complete.
+### Lab Setup
+Setup lab in simple cloning this repo.
+
+```
+git clone https://github.com/meibraransari/ansible-playground-docker.git
+```
+
+```
+cd ansible-playground-docker
+```
 ### Change Variable
 
 To start a Ansible lab use the following:
 > Change below variable or go with the defaults.
 ```
-git clone https://github.com/meibraransari/ansible-playground-docker.git
-cd ansible-playground-docker
 nano setup_playground.sh
 ```
 
