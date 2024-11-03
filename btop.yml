@@ -1,0 +1,16 @@
+# Installl btop on server_3
+---
+- name: Install btop on specified servers
+  hosts: server_3
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install btop
+      apt:
+        name: btop
+        state: present
+
+

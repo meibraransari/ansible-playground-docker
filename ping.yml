@@ -1,0 +1,9 @@
+# Ping Server 1
+---
+- name: Ping server_1 to check connectivity
+  hosts: server_1
+  gather_facts: no
+
+  tasks:
+    - name: Ping the nodes
+      ping:

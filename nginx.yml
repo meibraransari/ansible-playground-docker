@@ -1,0 +1,14 @@
+# Install nginx on server_2
+---
+- name: Install nginx on specific servers
+  hosts: server_2
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
