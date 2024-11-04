@@ -19,6 +19,13 @@ hostname=$(hostname -I | awk '{print $1}')
 config_file="$HOME/.ansible.cfg"
 inventory_file="inventory.ini"
 
+check_docker_installed() {
+    if command -v docker &> /dev/null; then
+        echo "Docker is installed."
+    else
+        echo "Docker is not installed. Please install Docker."
+    fi
+}
 
 # Function to pull Docker image
 pull_docker_image() {
@@ -109,6 +116,7 @@ ping_servers() {
 
 # Main function to execute all steps
 main() {
+    check_docker_installed
     pull_docker_image
     generate_ssh_key
     run_docker_containers
