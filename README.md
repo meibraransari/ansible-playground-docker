@@ -1,6 +1,6 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-03T11:53:56+05:30
+Updated: 2024-11-04T19:17:57+05:30
 Maintainer: Ibrar Ansari
 ---
 # Ansible Playground Docker (Support 100+ Nodes)
@@ -14,9 +14,9 @@ The primary goal is to enable users to quickly create an Ansible playground in s
 - [Prerequisites](#prerequisites)
 - [Features](#Features)
 - [Quick Start](#quick-start)
-	- [Lab Setup](#Lab-Setup)
-	- [Change Variable](#Change-Variable)
-	- [Run Ansible Lab](#Run-Ansible-Lab)
+	- [Clone Repo](#Clone-Repo)
+	- [Set No of Ansible Server](#Set-No-of-Ansible-Server)
+	- [Setup Ansible Lab](#Setup-Ansible-Lab)
 - [Lab Test](#Lab-Test)
 - [Conclusion](#Conclusion)
 
@@ -31,8 +31,7 @@ The primary goal is to enable users to quickly create an Ansible playground in s
 - Dynamic variable support, no static Username and password.
 - Easy to setup LAB in seconds.
 - Destroy in seconds once lab complete.
-### Lab Setup
-Setup lab in simple cloning this repo.
+### Clone Repo
 
 ```
 git clone https://github.com/meibraransari/ansible-playground-docker.git
@@ -41,33 +40,23 @@ git clone https://github.com/meibraransari/ansible-playground-docker.git
 ```
 cd ansible-playground-docker
 ```
-### Change Variable
+### Set No of Ansible Server
 
-To start a Ansible lab use the following:
-> Change below variable or go with the defaults.
+To Set No of Ansible Server change below variable or go with the defaults.
 ```
 nano setup_playground.sh
 ```
 
-
 ```
 # Set Variables
 containers=3
-base_container_name="server"
-ssh_user="ibrar_ansari"
-ssh_pass="your_secure_password"
-base_ssh_port=2023
-container_image="ibraransaridocker/ubuntu-ssh-enabled:latest"
-key_path="$HOME/.ssh/ansible_id_rsa_key.pub"
-hostname=$(hostname -I | awk '{print $1}')
-config_file="$HOME/.ansible.cfg"
-inventory_file="inventory.ini"
 ```
 
-### Run Ansible Lab
+### Setup Ansible Lab
 ```sh
 bash setup_playground.sh
 ```
+
 The script should perform the following tasks:
 - **Generate SSH Key:** Create an SSH key pair named ansible_id_rsa_key in the home directory of the current user.
 - **Start Containers:** Launch containers based on a specified variable named containers.
