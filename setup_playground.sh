@@ -27,6 +27,7 @@ check_docker_installed() {
         echo "Docker is installed."
     else
         echo "Docker is not installed. Please install Docker."
+        exit 1
     fi
 }
 
@@ -36,6 +37,7 @@ check_ansible_installed() {
         echo "Ansible is installed."
     else
         echo "Ansible is not installed. Please install Ansible."
+        exit 1
     fi
 }
 
