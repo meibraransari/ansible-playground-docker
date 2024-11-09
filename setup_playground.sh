@@ -7,8 +7,10 @@
 # This is Ansible Playground script
 ###################################
 
-# Set Variables
+# Basic config: Set no of Server
 containers=3
+
+# Advance config: Change if you are expert.
 base_container_name="server"
 ssh_user="ibrar_ansari"
 ssh_pass="your_secure_password"
@@ -19,11 +21,21 @@ hostname=$(hostname -I | awk '{print $1}')
 config_file="$HOME/.ansible.cfg"
 inventory_file="inventory.ini"
 
+# Check docker installed
 check_docker_installed() {
     if command -v docker &> /dev/null; then
         echo "Docker is installed."
     else
         echo "Docker is not installed. Please install Docker."
+    fi
+}
+
+# Check ansible installed
+check_ansible_installed() {
+    if command -v ansible &> /dev/null; then
+        echo "Ansible is installed."
+    else
+        echo "Ansible is not installed. Please install Ansible."
     fi
 }
 
@@ -117,6 +129,7 @@ ping_servers() {
 # Main function to execute all steps
 main() {
     check_docker_installed
+    check_ansible_installed
     pull_docker_image
     generate_ssh_key
     run_docker_containers
