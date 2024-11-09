@@ -1,6 +1,6 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-09T19:36:07+05:30
+Updated: 2024-11-09T20:38:09+05:30
 Maintainer: Ibrar Ansari
 ---
 # Ansible Playground Docker (Support 100+ Nodes)
@@ -98,12 +98,14 @@ docker ps -a
 ```
 ansible-playbook -i inventory.ini ping.yml
 ```
+![Ping](./assets/ping.png)
 
 ### Test 6: Install Nginx on server_2 using Playbook
 ```
 ansible-playbook -i inventory.ini nginx.yml
 ```
 
+![Nginx](./assets/nginx.png)
 Verify installed apps
 ```
 docker exec -it server_2 /bin/bash
@@ -119,7 +121,7 @@ exit
 ```
 ansible-playbook -i inventory.ini btop.yml
 ```
-
+![Btop](./assets/btop.png)
 ```
 docker exec -it server_3 /bin/bash
 btop --version
