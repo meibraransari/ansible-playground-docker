@@ -1,6 +1,6 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-09T19:08:00+05:30
+Updated: 2024-11-09T19:10:13+05:30
 Maintainer: Ibrar Ansari
 ---
 # Ansible Playground Docker (Support 100+ Nodes)
@@ -30,7 +30,7 @@ The primary goal is to enable users to quickly create an Ansible playground in s
 - Run Ansible Playground Docker within Seconds.
 - Dynamic variable support, no static Username and password.
 - Easy to setup LAB in seconds.
-- Destroy in seconds once lab complete.
+- Destroy lab in seconds, once you needed.
 ### Clone Repo
 
 ```
