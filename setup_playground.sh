@@ -123,8 +123,8 @@ countdown() {
 
 wait () {
     # Now, when you're ready for the countdown
-    echo "Waiting for containers up and running... "
-    countdown
+    countdown echo "Waiting for containers up and running... "
+    
 }
 
 
