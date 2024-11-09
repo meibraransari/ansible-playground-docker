@@ -1,6 +1,6 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-04T19:17:57+05:30
+Updated: 2024-11-09T19:08:00+05:30
 Maintainer: Ibrar Ansari
 ---
 # Ansible Playground Docker (Support 100+ Nodes)
@@ -18,8 +18,8 @@ The primary goal is to enable users to quickly create an Ansible playground in s
 	- [Set No of Ansible Server](#Set-No-of-Ansible-Server)
 	- [Setup Ansible Lab](#Setup-Ansible-Lab)
 - [Lab Test](#Lab-Test)
+- [Clean LAB](#Clean-LAB)
 - [Conclusion](#Conclusion)
-
 ## Prerequisites
 - Docker must be installed on your system.
 - Basic understanding of Docker and Ansible.
@@ -127,7 +127,7 @@ btop --utf-force
 exit
 ```
 
-### Clean Lab
+### Clean LAB
 Below command only delete created by this lab script.
 
 ```
