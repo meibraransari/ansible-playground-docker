@@ -34,7 +34,7 @@ check_docker_installed() {
 
 # Check ansible installed
 check_ansible_installed() {
-    echo "[+] Checking Ansible is installed...."
+    echo "[+] Checking Ansible is installed..."
     if command -v ansible &> /dev/null; then
         echo "✔️ Ansible is installed."
     else
