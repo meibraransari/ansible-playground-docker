@@ -129,8 +129,8 @@ wait () {
 
 
 # Function to ping servers using Ansible
-echo "[+] Checking servers using Ansible ping command..."
 ping_servers() {
+    echo "[+] Checking servers using Ansible ping command..."
     echo ""
     for i in $(seq 1 $containers); do
         ansible "server_$i" -i "$inventory_file" -m ping
