@@ -1,6 +1,6 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-09T20:38:09+05:30
+Updated: 2024-11-09T20:42:11+05:30
 Maintainer: Ibrar Ansari
 ---
 # Ansible Playground Docker (Support 100+ Nodes)
@@ -74,12 +74,12 @@ ansible server_1 -i inventory.ini -m ping
 ```
 ansible server_2 -i inventory.ini -m ping
 ```
-
+![Ping](./assets/cping.png)
 ### Test 2: Ping all Servers at once
 ```
 ansible all -i inventory.ini -m ping
 ```
-
+![PingAll](./assets/pingall.png)
 ### Test 3: Check hostname of Servers
 
 ```
@@ -88,7 +88,7 @@ ansible -i inventory.ini server_1 -m setup | grep ansible_hostname
 ```
 ansible -i inventory.ini server_2 -m setup | grep ansible_hostname
 ```
-
+![Hostname](./assets/hostname.png)
 ### Test 4: List Docker containers (LAB- Server)
 ```
 docker ps -a
