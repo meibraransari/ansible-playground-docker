@@ -23,6 +23,7 @@ inventory_file="inventory.ini"
 
 # Check docker installed
 check_docker_installed() {
+    echo "[+] Checking Docker is installed..."
     if command -v docker &> /dev/null; then
         echo "✔️ Docker is installed."
     else
@@ -33,6 +34,7 @@ check_docker_installed() {
 
 # Check ansible installed
 check_ansible_installed() {
+    echo "[+] Checking Ansible is installed...."
     if command -v ansible &> /dev/null; then
         echo "✔️ Ansible is installed."
     else
@@ -43,6 +45,7 @@ check_ansible_installed() {
 
 # Function to pull Docker image
 pull_docker_image() {
+    echo "[+] Pulling Docker images..."
     docker pull ibraransaridocker/ubuntu-ssh-enabled:latest
     echo "Image pulled successfully"
 }
@@ -50,6 +53,7 @@ pull_docker_image() {
 # Function to generate SSH key if not already generated
 generate_ssh_key() {
     if [ ! -f "$HOME/.ssh/ansible_id_rsa_key" ]; then
+        echo "[+] Generating SSH key..."
         ssh-keygen -t rsa -f "$HOME/.ssh/ansible_id_rsa_key" -b 4096 -C "This is used for ansible" -N ""
         ls -alsh "$HOME/.ssh/"
     fi
@@ -57,6 +61,7 @@ generate_ssh_key() {
 
 # Function to run Docker containers
 run_docker_containers() {
+    echo "[+] Setting up Docker containers for Ansible..."
     for i in $(seq 1 $containers); do
         local container_name="${base_container_name}_${i}"
         local ssh_port=$((base_ssh_port + i))
@@ -69,6 +74,7 @@ run_docker_containers() {
 
 # Function to test SSH connectivity
 test_ssh_connectivity() {
+    echo "[+] Testing SSH Connectivity..."
     for i in $(seq 1 $containers); do
         local ssh_port=$((base_ssh_port + i))
         ssh -o StrictHostKeyChecking=no -i "$HOME/.ssh/ansible_id_rsa_key" -p "$ssh_port" "$ssh_user@$hostname" "echo Connected to $hostname on port $ssh_port"
@@ -77,6 +83,7 @@ test_ssh_connectivity() {
 
 # Function to generate Ansible inventory file in the desired format
 generate_inventory_file() {
+    echo "[+] Generating Inventory file..."
     > "$inventory_file"  # Clear the inventory file if it exists
     for i in $(seq 1 $containers); do
         local ssh_port=$((base_ssh_port + i))
@@ -91,6 +98,7 @@ generate_inventory_file() {
 
 # Setting a Global Python Interpreter
 create_ansible_config() {
+    echo "[+] Creating Ansible config file..."
     # Create or overwrite the ansible.cfg file
     cat << EOF > "$config_file"
 [defaults]
@@ -121,6 +129,7 @@ wait () {
 
 
 # Function to ping servers using Ansible
+echo "[+] Checking servers using Ansible ping command..."
 ping_servers() {
     echo ""
     for i in $(seq 1 $containers); do
