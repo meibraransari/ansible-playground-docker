@@ -114,7 +114,7 @@ COUNTDOWN_TIME=10
 countdown() {
     local seconds=$COUNTDOWN_TIME
     while [ $seconds -gt 0 ]; do
-        echo -ne "[+] Waiting for containers up and running... $seconds\033[0K\r"
+        echo -ne "⏳ Waiting for containers up and running... $seconds\033[0K\r"
         sleep 1
         ((seconds--))
     done
