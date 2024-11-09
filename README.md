@@ -1,6 +1,6 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-09T19:17:04+05:30
+Updated: 2024-11-09T19:36:07+05:30
 Maintainer: Ibrar Ansari
 ---
 # Ansible Playground Docker (Support 100+ Nodes)
@@ -21,7 +21,7 @@ The primary goal is to enable users to quickly create an Ansible playground in s
 - [Clean LAB](#Clean-LAB)
 - [Conclusion](#Conclusion)
 ## Prerequisites
-- Docker must be installed on your system.
+- Docker and Ansible must be installed on your system.
 - Basic understanding of Docker and Ansible.
 - Basic knowledge of command-line operations.
 ## Quick Start
