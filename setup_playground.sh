@@ -24,9 +24,9 @@ inventory_file="inventory.ini"
 # Check docker installed
 check_docker_installed() {
     if command -v docker &> /dev/null; then
-        echo "Docker is installed."
+        echo "✔️ Docker is installed."
     else
-        echo "Docker is not installed. Please install Docker."
+        echo "❌ Docker is not installed. Please install Docker."
         exit 1
     fi
 }
@@ -34,9 +34,9 @@ check_docker_installed() {
 # Check ansible installed
 check_ansible_installed() {
     if command -v ansible &> /dev/null; then
-        echo "Ansible is installed."
+        echo "✔️ Ansible is installed."
     else
-        echo "Ansible is not installed. Please install Ansible."
+        echo "❌ Ansible is not installed. Please install Ansible."
         exit 1
     fi
 }
