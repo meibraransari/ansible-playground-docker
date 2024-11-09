@@ -1,6 +1,6 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-09T19:10:13+05:30
+Updated: 2024-11-09T19:17:04+05:30
 Maintainer: Ibrar Ansari
 ---
 # Ansible Playground Docker (Support 100+ Nodes)
@@ -40,7 +40,7 @@ git clone https://github.com/meibraransari/ansible-playground-docker.git
 ```
 cd ansible-playground-docker
 ```
-### Set No of Ansible Server
+### Set no of Ansible Server
 
 To Set No of Ansible Server change below variable or go with the defaults.
 ```
@@ -48,7 +48,7 @@ nano setup_playground.sh
 ```
 
 ```
-# Set Variables
+# Set no of Servers
 containers=3
 ```
 
