@@ -1,15 +1,19 @@
 ---
 Created: 2024-11-03T10:58:07+05:30
-Updated: 2024-11-10T10:18:15+05:30
+Updated: 2024-11-10T10:20:36+05:30
 Maintainer: Ibrar Ansari
 ---
 # Ansible Playground Docker (Support 100+ Nodes)
-This repository provides a comprehensive guide to deploying **Ansible Playground Docker** using Docker. The setup includes demonstrations and step-by-step instructions, making it easy for beginners to quickly spin up an Ansible environment.
 
-![Ansible](./assets/Ansible_playground.png)
+## 🎬 Video Demonstration
+[![Watch on Youtube](https://i.ytimg.com/vi_webp/Z_7Iu-APgrY/maxresdefault.webp)](https://youtu.be/Z_7Iu-APgrY?si=NXS1AypYAbIIkCqE)
+
+This repository provides a comprehensive guide to deploying **Ansible Playground Docker** using Docker. The setup includes demonstrations and step-by-step instructions, making it easy for beginners to quickly spin up an Ansible environment.
 ## Purpose
 
 The primary goal is to enable users to quickly create an Ansible playground in seconds. This setup is particularly beneficial for beginners who may not have access to multiple systems or servers, allowing them to practice and explore Ansible effortlessly.
+
+![Ansible](./assets/Ansible_playground.png)
 
 ## Table of Contents
 
@@ -22,9 +26,6 @@ The primary goal is to enable users to quickly create an Ansible playground in s
 - [Lab Test](#Lab-Test)
 - [Clean LAB](#Clean-LAB)
 - [Conclusion](#Conclusion)
-## 🎬 Video Demonstration
-[![Watch on Youtube](https://i.ytimg.com/vi_webp/Z_7Iu-APgrY/maxresdefault.webp)](https://youtu.be/Z_7Iu-APgrY?si=NXS1AypYAbIIkCqE)
-
 ## Prerequisites
 - Docker and Ansible must be installed on your system.
 - Basic understanding of Docker and Ansible.
